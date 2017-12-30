@@ -69,7 +69,7 @@ class Container implements ArrayAccess
         }
         //先构建反射类
         $reflector = new ReflectionClass($concrete);
-        //当该类是抽象类或者借口时，抛出异常，这里为了方便测试，去掉异常抛出
+        //当该类是抽象类或者接口时，抛出异常，这里为了方便测试，去掉异常抛出
         if (! $reflector->isInstantiable()) {
             echo $message = "Target [$concrete] is not instantiable";
         }
